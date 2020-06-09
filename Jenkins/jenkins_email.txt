@@ -1,0 +1,3 @@
+1. Document to solve error
+
+- https://stackoverflow.com/questions/25341198/javax-mail-authenticationfailedexception-is-thrown-while-sending-email-in-java

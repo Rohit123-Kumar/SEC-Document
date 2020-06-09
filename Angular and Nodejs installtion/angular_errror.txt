@@ -1,0 +1,11 @@
+1. 	npm ERR! Cannot read property 'match' of undefined
+
+	npm ERR! A complete log of this run can be found in:
+	npm ERR!     /root/.npm/_logs/2020-04-15T07_01_59_226Z-debug.log
+
+solution-> #rm -rf package-lock.json
+		and doclink--https://stackoverflow.com/questions/46352394/webpack-cannot-read-property-match-of-undefined 
+
+2.npm ERR! node-sass@3.8.0 install: node scripts/install.js
+
+solution-> sudo npm install --unsafe-perm node-sass

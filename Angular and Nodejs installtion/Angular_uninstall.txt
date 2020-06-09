@@ -1,0 +1,9 @@
+to uninstall angular
+	
+	sudo npm uninstall -g angular-cli
+	sudo npm cache clean
+	ng -v
+	which ng
+   	sudo rm -rf /lib/node_modules/@angular/cli/bin/ng
+   	sudo rm -rf /usr/bin/ng
+  	sudo npm install -g @angular/cli

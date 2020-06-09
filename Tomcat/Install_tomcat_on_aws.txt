@@ -1,0 +1,10 @@
+install tomcat on server 
+	wget http://apachemirror.wuchna.com/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.tar.gz
+	mv apache-tomcat-9.0.34.tar.gz /home/ec2-user/
+	cd /home/ec2-user/
+	tar -xvzf apache-tomcat-9.0.34.tar.gz
+	cd apache-tomcat-9.0.34
+	sudo ln -s /home/ec2-user/apache-tomcat-9.0.34/bin/startup.sh /etc/init.d/sttomcat
+        service sttomcat
+        sudo ln -s /home/ec2-user/apache-tomcat-9.0.34/bin/shutdown.sh /etc/init.d/sotomcat
+	service sotomcat

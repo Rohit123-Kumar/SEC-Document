@@ -1,0 +1,5 @@
+1.On your sasken desktop open command prompt->run command ssh-keygen.
+2.copy id_rsa.pub key content.
+3.open your account setting on top right corner -> select ssh key section -> Paste the id_rsa.pub key of your local 
+  system in the Key block -> give name -> add key.(expiry date is optional you can skip)
+4.now clone using git ssh url in gitbash or cmd.

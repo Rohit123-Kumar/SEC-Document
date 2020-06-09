@@ -1,0 +1,24 @@
+1.To resolve the error of 404: 'sec-app-react/epic' resource not found,followed the suggestion by Jerud Rutnam in below link:
+		https://stackoverflow.com/questions/41246261/react-routing-is-able-to-handle-different-url-path-but-tomcat-returns-404-not-av
+{    For Tomcat versions below 8. You can just add a web.xml file and route the 404 to index.html.
+
+     goto  webapps/[my-app-name]/WEB-INF/web.xml  and add following lines
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+             http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+             version="2.4">
+
+        <display-name>my-app-name</display-name>
+
+        <error-page>
+        <error-code>404</error-code>
+        <location>/index.html</location>
+        </error-page>
+
+        </web-app>
+
+}
+

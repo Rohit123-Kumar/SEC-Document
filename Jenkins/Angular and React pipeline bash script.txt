@@ -1,0 +1,46 @@
+Angular(prod)
+
+sudo cp -avr /root/tomcat/apache-tomcat-9.0.34/webapps/sec-app-angular /root/sec_backup
+sudo rm -rf /root/tomcat/apache-tomcat-9.0.34/webapps/sec-app-angular
+sudo npm install
+sudo ng build --base-href=/sec-app-angular/
+#sudo ng test
+#sudo ng test --code-coverage
+sudo rm -rf /root/tomcat/apache-tomcat-9.0.34/webapps/sec-app-angular
+sudo mv /var/lib/jenkins/workspace/SEC-angular/dist/sec-app-angular /root/tomcat/apache-tomcat-9.0.34/webapps
+sudo service stop_tomcat
+sudo service start_tomcat 
+
+Angular(Dev)
+
+cd Angular
+rm -rf dist
+npm i
+ng build --base-href=/sec-app-angular/
+cp -avr /var/jenkins_home/workspace/SEC-angular-build/dist/sec-app-angular /SECvol
+
+React(Prod)
+
+sudo cp -avr /root/tomcat/apache-tomcat-9.0.34/webapps/sec-app-react /root/sec_backup
+sudo rm -rf /var/lib/jenkins/workspace/SEC-React/sec-app-react
+#sudo rm -rf /var/lib/jenkins/workspace/new/package-lock.json
+#sudo npm i -d core-js
+sudo npm i
+#sudo nom audit fix
+sudo npm run build
+sudo npm test -- --coverage --watchAll=false
+sudo rm -rf /root/tomcat/apache-tomcat-9.0.34/webapps/sec-app-react
+sudo mv /var/lib/jenkins/workspace/SEC-React/build /var/lib/jenkins/workspace/SEC-React/sec-app-react
+sudo cp -avr /var/lib/jenkins/workspace/SEC-React/sec-app-react  /root/tomcat/apache-tomcat-9.0.34/webapps
+sudo service stop_tomcat
+sudo service start_tomcat
+
+React(Dev)
+
+rm -rf build
+npm i
+npm run build
+npm test -- --coverage --watchAll=false
+pwd
+cp -avr /var/jenkins_home/workspace/React_build/build/ /SECvol/sec-app-react
+

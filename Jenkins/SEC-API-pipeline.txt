@@ -1,0 +1,12 @@
+1.new item in jenkins
+2.Free style project -> give name.
+3.Add git repo url and password.
+4.select Pollscm and add crontab.
+5.In Build step select invoke top-level maven targets -> select 
+ the Maven Version as Maven -> Goals as clean install -> in 
+ advance setting select pom location if not present in working 
+ directory with complete path like example /var/lib/jenkins_home/workspace/API-services/pom.xml.
+6.In Postbuild action select deploy to container -> select war location and paste in war/ear file
+  ->contex path as sec-0.0.1-SNAPSHOT -> select container as Tomcat 8.x Remote 
+  -> add creential of your tomcat server and it's link like http://<IP>:<port>/
+7.Save and apply.

@@ -1,0 +1,2 @@
+1.To know port and service
+	#sudo lsof -i -P -n | grep LISTEN

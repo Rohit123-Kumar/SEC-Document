@@ -1,0 +1,5 @@
+openjdk(Java)         1.8.0_242
+Jenkins               2.231
+Nodejs                13.13.0
+Angular cli           9.1.1
+Apache Tomcat         9.0.34

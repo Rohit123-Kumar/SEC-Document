@@ -1,0 +1,71 @@
+pipline video
+	https://www.youtube.com/watch?v=cbUqgS82d48(angular code in github angular-ssr-starter)
+	https://www.youtube.com/watch?v=cbUqgS82d48&t=359s
+	
+
+Angular pipeline Doc
+	https://www.freecodecamp.org/news/steps-you-should-take-to-build-a-healthy-angular-project-84eea6608d5f/
+
+angular sample project 
+	https://www.lucidchart.com/techblog/2016/12/12/installing-angular-2-and-other-dependencies/
+
+nodejs install
+	https://tecadmin.net/install-latest-nodejs-amazon-linux/
+
+
+commands
+    2  yum update -y
+    3  yum install java-1.8.0-openjdk
+    4  java -version
+    5  sudo yum update –y
+    6 
+   10  sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+   11  sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+   12  sudo yum install jenkins
+   13  sudo service jenkins start
+   14  sudo service jenkins status
+   15  cat /var/lib/jenkins/secrets/initialAdminPassword
+   16  sudo yum install -y gcc-c++ make
+   17  curl -sL https://rpm.nodesource.com/setup_13.x | sudo -E bash -
+   18  sudo yum install -y nodejs
+   19  node -v
+   20  npm -v
+   21  sudo npm install -g @angular/cli
+
+to uninstall angular
+	
+	sudo npm uninstall -g angular-cli
+	sudo npm cache clean
+	ng -v
+	which ng
+   	sudo rm -rf /lib/node_modules/@angular/cli/bin/ng
+   	sudo rm -rf /usr/bin/ng
+  	sudo npm install -g @angular/cli
+
+install tomcat
+	wget http://apachemirror.wuchna.com/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.tar.gz
+	mv apache-tomcat-9.0.34.tar.gz /home/ec2-user/
+	cd /home/ec2-user/
+	tar -xvzf apache-tomcat-9.0.34.tar.gz
+	cd apache-tomcat-9.0.34
+	sudo ln -s /home/ec2-user/apache-tomcat-9.0.34/bin/startup.sh /etc/init.d/sttomcat
+        service sttomcat
+        sudo ln -s /home/ec2-user/apache-tomcat-9.0.34/bin/shutdown.sh /etc/init.d/sotomcat
+	service sotomcat
+
+
+	
+To deploy the file
+	copy dist/app folder into tomcat/webapps
+	create a folder inside webapps/app/
+	then create a file inisde webapps/app/WEB-INF/web.xml with content
+		<web-app>
+    		   <error-page>
+         		<error-code>404</error-code>
+         		<location>/index.html</location>
+     		   </error-page>
+		</web-app>
+
+
+
+

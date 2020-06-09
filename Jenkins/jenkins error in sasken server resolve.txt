@@ -1,0 +1,14 @@
+Jenkins error of plugin failure in ubuntu(sasken server)
+
+	- apt-get update -y
+	- wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+ 	- sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+    	/etc/apt/sources.list.d/jenkins.list'
+ 	- sudo apt-get update
+    	- sudo add-apt-repository universe
+   	- sudo apt-get update
+   	- vi /etc/apt/sources.list // add line 
+   	- apt-get update -y
+   	- sudo apt-get install jenkins
+   	- service jenkins start
+   	- service jenkins status

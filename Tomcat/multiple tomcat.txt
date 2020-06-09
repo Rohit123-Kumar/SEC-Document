@@ -1,0 +1,36 @@
+				LINES
+
+Here is my expperience/process of making two Tomcats (Tom1 and Tom2) running on Windows:
+
+Setup Tomcat according to http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
+
+However, Tom1 starts up fine, but not Tom2.
+
+So in addition to the above, in server.xml, make/change the following (on Tomcat 6.0.44, JDK 1.6.0_45):
+
+Line 22: Tom1 shutdown port = 9001
+Line 22: Tom2 shutdown port = 9002
+
+Line 53: Tom1 service name = "Catalina1"
+Line 53: Tom2 service name = "Catalina2"
+
+Line 69: Tom1 connector (http) = 9001
+Line 69: Tom2 connector (http) = 9002
+
+Line 71: Tom1 redirect port = 8443
+Line 71: Tom2 redirect port = 8444
+
+Line 90: Tom1 connector (ajp) = 8009
+Line 90: Tom1 redirect = 8443
+Line 90: Tom2 connector (ajp) = 8010
+Line 90: Tom2 redirect = 8444
+
+Line 102: Tom1 engine name = "Catalina1"
+Line 102: Tom2 engine name = "Catalina2"
+
+Starting up each server
+
+
+
+
+DOC:https://stackoverflow.com/questions/4678077/can-i-run-two-tomcat-instances-on-the-same-machine

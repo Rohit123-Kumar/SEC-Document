@@ -1,0 +1,10 @@
+!.Open conf/server.xml and add the lines in <Host></Host> block
+
+	<Host name="localhost"  appBase="webapps"
+            unpackWARs="true" autoDeploy="true">
+
+       <Alias>www.sec.sasken.com</Alias>
+      <Context path="" docBase="sec-app-react" debug="0" privileged="true" />
+	</Host>
+
+2.Then after modifying domain name restart tomcat.
